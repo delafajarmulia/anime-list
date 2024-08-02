@@ -1,0 +1,5 @@
+-> folder app khusus buat routing halaman, jadinya penamaan folder huruf kecil semua. 
+-> penamaan folder didlm folder component itu besar semua, kayak di react
+
+-> penamaan file di dlm folder app/folder-name/page.js karema fungsinya udah jelas sebagai halaman/page
+-> penamaan file di dlm folder src/FolderName/index.js karema fungsinya udah sebagai component
