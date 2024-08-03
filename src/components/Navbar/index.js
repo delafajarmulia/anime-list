@@ -1,4 +1,5 @@
 import Link from "next/link"
+import InputSearch from "./InputSearch"
 
 const Navbar = () => {
     return(
@@ -9,10 +10,7 @@ const Navbar = () => {
                     className="font-bold text-white text-2xl">
                         DelAnimeList
                 </Link>
-                <input 
-                    placeholder="cari anime" 
-                    className="rounded p-1 mb-1.5 mt-1.5"
-                />
+                <InputSearch />
             </div>
         </header>
     )
