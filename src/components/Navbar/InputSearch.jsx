@@ -10,9 +10,13 @@ const InputSearch = () => {
 
     const handleSearch = (event) => {
         if(event.key === "Enter" || event.type === "click"){
-            event.preventDefault() // mencegah perilaku default suatu elemen agar tidak terpicu, sehingga memungkinkan kontrol yang lebih besar atas alur aplikasi.
             const keyword = searchRef.current.value
-            router.push(`/search/${keyword}`)
+            if(!keyword){
+                alert('isi dulu searchnya')
+            }else{
+                event.preventDefault() // mencegah perilaku default suatu elemen agar tidak terpicu, sehingga memungkinkan kontrol yang lebih besar atas alur aplikasi.
+                router.push(`/search/${keyword}`)
+            }
         }
     }
 
