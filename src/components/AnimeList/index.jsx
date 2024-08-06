@@ -7,7 +7,7 @@ const AnimeList = ({ api }) => {
             {api.data?.map((anime, index) => { // ? buat ngasih loading, biar datanya gak langsung ke load, ini juga cek data
                 return(
                     <Link 
-                        href={`/${anime.mal_id}`} 
+                        href={`/anime/${anime.mal_id}`} 
                         className="cursor-pointer text-color-primary hover:text-color-accent transition-all"
                         key={index}>
                             <Image 
