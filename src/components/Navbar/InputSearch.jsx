@@ -11,7 +11,7 @@ const InputSearch = () => {
     const handleSearch = (event) => {
         if(event.key === "Enter" || event.type === "click"){
             const keyword = searchRef.current.value
-            if(!keyword){
+            if(!keyword || keyword.trim() == ''){
                 alert('isi dulu searchnya')
             }else{
                 event.preventDefault() // mencegah perilaku default suatu elemen agar tidak terpicu, sehingga memungkinkan kontrol yang lebih besar atas alur aplikasi.
