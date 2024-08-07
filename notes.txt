@@ -14,3 +14,4 @@ loading generator css
 decode uri -> spasi kayak pas melakukan pencarian %20
 
 npm i --save react-youtube
+npm install next-auth
