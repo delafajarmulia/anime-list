@@ -1,15 +1,21 @@
 import { getAnimeResponse } from "@/libs/api-libs"
 import VideoPlayer from "@/components/utilities/VideoPlayer"
 import Image from "next/image"
+import ColllectionBtn from "@/components/AnimeList/CollectionBtn"
+import { authUserSession } from "@/libs/auth-libs"
 
 const Page = async({ params: {id} }) => { // id itu berasal dari foldernya, sdgkan params udah dari next js
     const anime = await getAnimeResponse(`anime/${id}`)
+    const user = await authUserSession()
     
     return(
         <div>
-            <p className="text-color-primary text-center text-2xl pt-5">
-                {anime.data.title} - {anime.data.year}
-            </p>
+            <div className="pt-5 px-4">
+                <p className="text-color-primary text-center text-2xl">
+                    {anime.data.title} - {anime.data.year}
+                </p>
+                <ColllectionBtn />
+            </div>
             <div className="pt-4 px-4 flex gap-2 text-color-primary overflow-x-auto">
                 <div className="w-36 flex flex-col justify-center items-center roundedd border border-color-primary p-2">
                     <h3>Rank</h3>
